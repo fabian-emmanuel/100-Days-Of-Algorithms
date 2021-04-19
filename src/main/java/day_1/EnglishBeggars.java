@@ -1,9 +1,6 @@
 package day_1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 
 /*
 Born a misinterpretation of this kata, your task here is pretty simple:
@@ -29,12 +26,14 @@ then you are not familiar on how religiously queues are taken in the kingdom ;)
 Note 2: do not modify the input array.
  */
 public class EnglishBeggars {
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(beggars(new int[]{1, 2, 3, 4, 5}, 2)));
+        System.out.println(Arrays.toString(beggars(new int[]{1, 2, 3, 4, 5}, 3)));
+    }
     public static int[] beggars(int[] values, int n) {
         int[] ans = new int[n];
-        int sum = 0;
-        if(n == 0) return ans;
-
         for (int i = 0; i < n; i++) {
+            var sum = 0;
             for (int j = i; j < values.length; j += n) {
                 sum += values[j];
             }ans[i] = sum;

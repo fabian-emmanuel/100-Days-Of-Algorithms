@@ -1,8 +1,7 @@
 package day_1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+
 
 /*
 Find the sum of the odd numbers within an array, after cubing the initial integers.
