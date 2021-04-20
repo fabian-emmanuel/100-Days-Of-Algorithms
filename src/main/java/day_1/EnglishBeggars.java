@@ -38,5 +38,6 @@ public class EnglishBeggars {
                 sum += values[j];
             }ans[i] = sum;
         }return ans;
+
     }
 }
