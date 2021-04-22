@@ -29,11 +29,13 @@ Don't mutate the inputs.
  */
 public class WhichAreIn {
     public static void main(String[] args) {
-        String a[] = new String[]{ "arp", "live", "strong" };
-        String b[] = new String[] { "lively", "alive", "harp", "sharp", "armstrong" };
-        //String r[] = new String[] { "arp", "live", "strong" };
+        var a = new String[]{ "arp", "live", "strong" };
+        var b = new String[] { "lively", "alive", "harp", "sharp", "armstrong" };
+
         System.out.println(Arrays.toString(inArray(a, b)));
     }
+
+
     public static String[] inArray(String[] array1, String[] array2) {
         var result = Stream.of(array1)
                 .filter(s -> Stream.of(array2).anyMatch(x -> x.contains(s)))
