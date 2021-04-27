@@ -1,6 +1,5 @@
 package day_6;
 
-import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -11,9 +10,8 @@ Return your answer as a number.
  */
 public class SumMixedArray {
     public int sum(List<?> mixed) {
-        int ans = mixed.stream()
+        return mixed.stream()
                 .mapToInt(x -> Integer.parseInt("" + x))
                 .sum();
-        return ans;
     }
 }

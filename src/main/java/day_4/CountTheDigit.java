@@ -27,7 +27,10 @@ import java.util.stream.IntStream;
 
 public class CountTheDigit {
     public static void main(String[] args) {
-        System.out.println(IntStream.rangeClosed(0, 10).flatMap(a -> (""+ a * a).chars()).filter(a -> a == 1 + '0').count());
+        System.out.println(IntStream.rangeClosed(0, 10)
+                .flatMap(a -> (""+ a * a).chars())
+                .filter(a -> a == 1 + '0')
+                .count());
 
     }
     public static int nbDig(int n, int d) {

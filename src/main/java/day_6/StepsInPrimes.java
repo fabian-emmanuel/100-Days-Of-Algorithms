@@ -1,8 +1,9 @@
 package day_6;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
-import java.util.List;
+import static java.math.BigInteger.valueOf;
+import static java.util.stream.LongStream.range;
 
 /*
 The prime numbers are not regularly spaced. For example from 2 to 3 the step is 1.
@@ -57,15 +58,10 @@ public class StepsInPrimes {
         System.out.println(Arrays.toString(step(2, 5, 7)));
     }
     public static long[] step(int g, long m, long n) {
-        var ans = new long[g];
-        for (long i=m;i<=n;i++){
-            if(i%2==1){
-                ans[g-1] = i;
-                --g;
-            }
-            return ans;
-        }
-        return ans;
-
+        return range(m, n - g)
+                .filter(l -> valueOf(l).isProbablePrime(10) && valueOf(l + g).isProbablePrime(10))
+                .mapToObj(l -> new long[] {l, l + g})
+                .findFirst()
+                .orElse(null);
     }
 }
