@@ -55,6 +55,7 @@ Example: step(2,4900,4919) --> nil
  */
 public class StepsInPrimes {
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(step(2, 4900, 4919)));
         System.out.println(Arrays.toString(step(2, 5, 7)));
     }
     public static long[] step(int g, long m, long n) {

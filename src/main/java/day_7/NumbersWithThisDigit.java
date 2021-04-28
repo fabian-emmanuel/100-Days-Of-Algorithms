@@ -33,7 +33,7 @@ Have fun coding it and please don't forget to vote and rank this kata! :-)
  */
 public class NumbersWithThisDigit {
     public static void main(String[] args) {
-        NumbersWithDigitInside(10, 2);
+        System.out.println(Arrays.toString(NumbersWithDigitInside(10, 2)));
 
     }
 
@@ -47,7 +47,6 @@ public class NumbersWithThisDigit {
         }
         System.out.println(list.stream().toString().);
        // System.out.println(list);
-
         long[] nums = rangeClosed(1, x).filter(i -> ("" + i).contains("" + d)).toArray();
         return new long[] {nums.length, of(nums).sum(), of(nums).reduce((a, b) -> a * b).orElse(0L)};
     */

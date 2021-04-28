@@ -32,3 +32,4 @@ public class DisemVowel {
         return str.replaceAll("[aAeEiIoOuU]", "");
     }
 }
+

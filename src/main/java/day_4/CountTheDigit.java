@@ -2,11 +2,8 @@ package day_4;
 /*
 
 Take an integer n (n >= 0) and a digit d (0 <= d <= 9) as an integer.
-
 Square all numbers k (0 <= k <= n) between 0 and n.
-
 Count the numbers of digits d used in the writing of all the k**2.
-
 Call nb_dig (or nbDig or ...) the function taking n and d as parameters and returning this count.
 
 Examples:
@@ -19,8 +16,6 @@ the k*k that contain the digit 1 are:
 1, 16, 81, 100, 121, 144, 169, 196, 361, 441.
 So there are 11 digits 1 for the squares of numbers between 0 and 25.
 Note that 121 has twice the digit 1.
-
-
  */
 
 import java.util.stream.IntStream;
@@ -31,7 +26,6 @@ public class CountTheDigit {
                 .flatMap(a -> (""+ a * a).chars())
                 .filter(a -> a == 1 + '0')
                 .count());
-
     }
     public static int nbDig(int n, int d) {
         return Math.toIntExact(IntStream.rangeClosed(0, n)

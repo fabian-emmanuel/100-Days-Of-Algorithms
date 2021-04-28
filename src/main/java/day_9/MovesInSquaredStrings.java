@@ -1,5 +1,6 @@
 package day_9;
 
+import java.util.Arrays;
 import java.util.function.Function;
 
 /*
@@ -41,6 +42,10 @@ The input strings are separated by , instead of \n. The output strings should be
 public class MovesInSquaredStrings {
     public static void main(String[] args) {
         var s = "abcd\nefgh\nijkl\nmnop";
+        var sa = "world";
+        var a= new StringBuilder(sa).reverse().toString();
+        System.out.println(a);
+
         System.out.println(horMirror(s)); //"mnop\nijkl\nefgh\nabcd"
         System.out.println(vertMirror(s));//"dcba\nhgfe\nlkji\nponm"
         System.out.println(oper(MovesInSquaredStrings::vertMirror, s)); //"dcba\nhgfe\nlkji\nponm"
